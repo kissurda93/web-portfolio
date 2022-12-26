@@ -1,0 +1,137 @@
+.projects-section {
+	background-color: var(--green);
+	animation: load-in 500ms;
+	color: var(--light);
+	padding-bottom: 10rem;
+	animation: load-in 500ms;
+}
+
+.project-container-title {
+	padding: 2rem;
+	color: var(--dark);
+	font-size: 2rem;
+}
+
+.project-container {
+	margin-bottom: 1rem;
+	background-color: var(--dark);
+	width: 100%;
+}
+
+.project-info {
+	padding: 1rem;
+}
+
+.img-container {
+	display: none;
+}
+
+.name {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.link-container {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: flex-end;
+	justify-self: flex-end;
+	gap: 1rem;
+}
+
+.link-container > a > button {
+	padding: 0.4rem 0.7rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	background-color: var(--green);
+	color: var(--dark);
+	cursor: pointer;
+	transition: 250ms ease-in;
+}
+
+.link-container > a > button:hover {
+	background-color: var(--shadow_red);
+	color: var(--yellow);
+}
+
+@media only screen and (min-width: 500px) {
+	.projects-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.projects-section {
+		margin: 0 auto;
+	}
+
+	.project-container-title {
+		padding-bottom: 1rem;
+	}
+
+	.project-container {
+		width: 600px;
+		border-radius: 2px;
+		box-shadow: 4px 4px 8px rgba(0, 0, 0);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.projects-section {
+		font-size: 1.5rem;
+		padding: 1rem;
+		animation: none;
+	}
+
+	.project-container-title {
+		font-size: 4rem;
+		padding-top: 1rem;
+	}
+
+	.project-container {
+		width: 900px;
+		padding: 2rem;
+		margin: 2rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.project-info {
+		padding-right: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.name {
+		font-size: 2rem;
+	}
+
+	.link-container > a > button {
+		font-size: 1.2rem;
+		padding: 0.6rem 1rem 0.6rem 1rem;
+	}
+
+	.img-container {
+		display: block;
+	}
+
+	.project-container-title,
+	.project-container {
+		opacity: 0;
+		transform: translateX(-200px);
+		transition: 600ms ease-in;
+		pointer-events: none;
+	}
+
+	.isVisible {
+		transform: translateX(0);
+		opacity: 1;
+		pointer-events: all;
+	}
+}

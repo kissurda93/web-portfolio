@@ -1,0 +1,47 @@
+.main-navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	box-shadow: 2px 2px 16px var(--dark);
+	background-color: var(--light);
+	z-index: 9;
+}
+
+.main-navbar > ul {
+	display: flex;
+	animation: load-in 1s;
+}
+
+.main-navbar > ul > li {
+	padding: 0.8rem;
+}
+
+.main-navbar ul > li > a {
+	font-size: 1.2rem;
+	color: var(--dark);
+	background: linear-gradient(
+		to right,
+		var(--light),
+		var(--shadow_red),
+		var(--red),
+		var(--shadow_red),
+		var(--light)
+	);
+	background-repeat: no-repeat;
+	background-size: 0 2px;
+	background-position: 100% 100%;
+	transition: background-size 300ms;
+}
+
+.main-navbar > ul > li > a:hover,
+.main-navbar > ul > li > .active {
+	background-size: 100% 2px;
+}
+
+@media only screen and (min-width: 1024px) {
+	.main-navbar ul > li > a {
+		font-size: 1.6rem;
+	}
+}
