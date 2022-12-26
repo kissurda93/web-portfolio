@@ -90,7 +90,7 @@ const Contact = () => {
 					</form>
 				</section>
 			</div>
-			<div className='icon-container' ref={icon}>
+			<div className='icon-container'>
 				<a
 					href='mailto:jg19930610@gmail.com?subject="Message from Portfolio site"'
 					rel='noreferrer noopener'
