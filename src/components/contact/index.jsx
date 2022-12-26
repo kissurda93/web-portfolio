@@ -13,7 +13,6 @@ import useIntersectionObs from "../../hooks/useIntersectionObs";
 const Contact = () => {
 	const options = { root: null, rootMargin: "0px", threshold: 1.0 };
 	const [form, formIsVisible] = useIntersectionObs({ options });
-	const [icon, iconIsVisible] = useIntersectionObs({ options });
 
 	const [submitText, setSubmitText] = useState("Send message");
 	const [formData, setFormData] = useState({
@@ -41,10 +40,10 @@ const Contact = () => {
 		} else {
 			emailjs
 				.sendForm(
-					"service_8i4q94t",
-					"template_m7p3ll7",
+					process.env.REACT_APP_SERVICE_ID,
+					process.env.REACT_APP_TEMPLATE_ID,
 					form.current,
-					"09u-n8besABSFHhxp"
+					process.env.REACT_APP_PUBLIC_KEY
 				)
 				.then(
 					result => {
