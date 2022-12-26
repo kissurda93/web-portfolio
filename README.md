@@ -1,3 +1,18 @@
+# Web portfolio in React
+
+Used packages:
+-->emailjs/browser
+-->react-scrollspy-nav
+-->react-fontawesome
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
