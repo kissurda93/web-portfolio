@@ -8,7 +8,7 @@
 .intro {
 	flex-direction: column;
 	animation: load-in 500ms;
-	padding: 10rem 0rem;
+	padding: 5rem 0rem;
 	animation: load-in 500ms;
 }
 
@@ -21,6 +21,7 @@ h1 {
 
 .colored {
 	color: var(--red);
+	font-weight: 600;
 }
 
 .intro-text {

@@ -1,19 +1,8 @@
 import "./projects.css";
-import useIntersectionObs from "../../hooks/useIntersectionObs";
 
 const ProjectCard = props => {
-	const [container, containerIsVisible] = useIntersectionObs({
-		root: null,
-		rootMargin: "0px",
-		threshold: 1,
-	});
-
 	return (
-		<div
-			className={
-				containerIsVisible ? "project-container isVisible" : "project-container"
-			}
-			ref={container}>
+		<div className='project-container'>
 			<div className='project-info'>
 				<p className='name'>{props.project.name}</p>
 				<p className='description'>{props.project.description}</p>

@@ -4,11 +4,9 @@ import useIntersectionObs from "../../hooks/useIntersectionObs";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
-	const [title, titleIsVisible] = useIntersectionObs({
-		root: null,
-		rootMargin: "0px",
-		threshold: 1,
-	});
+	const options = { root: null, rootMargin: "0px", threshold: 1 };
+	const [title, titleIsVisible] = useIntersectionObs({ options });
+	const [projects, projectsIsVisible] = useIntersectionObs({ options });
 
 	return (
 		<section id='projects' className='projects-section'>
@@ -21,7 +19,9 @@ const Projects = () => {
 				ref={title}>
 				Projects
 			</h2>
-			<div className='projects'>
+			<div
+				className={projectsIsVisible ? "projects isVisible" : "projects"}
+				ref={projects}>
 				{projectArray.map(project => {
 					return <ProjectCard project={project} key={project.id} />;
 				})}
