@@ -92,7 +92,7 @@
 	.project-container {
 		width: 600px;
 		border-radius: 2px;
-		box-shadow: 4px 4px 8px rgba(0, 0, 0);
+		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 	}
 }
 
@@ -104,13 +104,13 @@
 	}
 
 	.project-container-title {
-		font-size: 4rem;
+		font-size: 3rem;
 		padding-top: 1rem;
 	}
 
 	.project-container {
 		width: 900px;
-		padding: 3rem;
+		padding: 1rem;
 		margin: 2rem;
 		display: flex;
 		justify-content: space-between;
@@ -118,18 +118,18 @@
 	}
 
 	.project-info {
-		padding-right: 2rem;
+		padding-right: 1.1rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
 
 	.name {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	.link-container > a > button {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		padding: 0.6rem 1rem 0.6rem 1rem;
 	}
 
