@@ -1,4 +1,5 @@
 import "./navbar.css";
+import myLogo from "../../assets/jglogo.svg";
 import ScrollspyNav from "react-scrollspy-nav";
 
 const Navbar = () => {
@@ -10,6 +11,9 @@ const Navbar = () => {
 			scrollDuration='400'
 			headerBackground='true'>
 			<nav className='main-navbar'>
+				<div className='logo-container'>
+					<img className='logo' src={myLogo} alt='Logo' />
+				</div>
 				<ul>
 					<li>
 						<a href='#about'>About</a>

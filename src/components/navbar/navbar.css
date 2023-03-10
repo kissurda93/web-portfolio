@@ -3,8 +3,9 @@
 	top: 0;
 	width: 100%;
 	display: flex;
-	justify-content: center;
-	box-shadow: 2px 2px 16px var(--dark);
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 6px 6px 20px var(--dark);
 	background-color: var(--light);
 	z-index: 9;
 }
@@ -18,17 +19,20 @@
 	padding: 0.8rem;
 }
 
+.logo-container {
+	padding: 0.2rem;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 40px;
+}
+
 .main-navbar ul > li > a {
 	font-size: 1.2rem;
 	color: var(--dark);
-	background: linear-gradient(
-		to right,
-		var(--light),
-		var(--shadow_red),
-		var(--red),
-		var(--shadow_red),
-		var(--light)
-	);
+	background: linear-gradient(to right, var(--light), var(--red), var(--light));
 	background-repeat: no-repeat;
 	background-size: 0 2px;
 	background-position: 100% 100%;
@@ -42,6 +46,10 @@
 
 @media only screen and (min-width: 1024px) {
 	.main-navbar ul > li > a {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
+	}
+
+	.logo {
+		height: 50px;
 	}
 }

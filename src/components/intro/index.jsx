@@ -32,14 +32,21 @@ const Intro = () => {
 				className={textIsVisible ? "intro-text isVisible" : "intro-text"}
 				ref={text}>
 				<p>
-					Hello my name is <span className='colored'>Gábor Jőrös</span>, I live
-					in Hungary. My current goal is to be part of a team where I can
-					improve my knowledge.
+					Hello my name is <span className='colored'>Gábor Jőrös</span>, from
+					Hungary. My current goal is to be part of a team where I can deepen my
+					knowledge in technologies such as React and or Laravel.
 				</p>
 				<p>
 					This <span className='colored'>Portfolio</span> is a showcase of my
-					progress so far, including a selection of projects that I've worked
-					on. I hope you enjoy taking a look and getting to know me as a
+					live demo projects. If you are interested in my other works, please
+					check my{" "}
+					<a
+						href='https://github.com/kissurda93?tab=repositories'
+						rel='noreferrer noopener'
+						target={"_blank"}>
+						github
+					</a>{" "}
+					account. I hope you enjoy taking a look and getting to know me as a
 					developer.
 				</p>
 			</div>
