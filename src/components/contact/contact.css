@@ -48,7 +48,7 @@ textarea:focus {
 
 form > input[type="submit"] {
 	width: 160px;
-	background-color: var(--red);
+	background-color: var(--shadow_red);
 	color: var(--yellow);
 	font-size: 1.2rem;
 	border: none;
