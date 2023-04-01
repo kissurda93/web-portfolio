@@ -3,13 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faHtml5,
 	faCss3Alt,
-	faBootstrap,
 	faJsSquare,
 	faReact,
 	faPhp,
 	faLaravel,
 } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import useIntersectionObs from "../../hooks/useIntersectionObs";
+import Redux from "../../assets/redux.svg";
+import MySql from "../../assets/mysql.svg";
 
 const Intro = () => {
 	const options = { root: null, rootMargin: "0px", threshold: 1.0 };
@@ -24,17 +26,20 @@ const Intro = () => {
 				className={titleIsVisible ? "intro-title isVisible" : "intro-title"}
 				ref={title}>
 				<h1>
-					Learning and Growing as a{" "}
-					<span className='colored'>Web-Developer</span>
+					<q>
+						Every Day is a <span className='colored'>Learning Day</span>
+					</q>
 				</h1>
+				<p>Winston Marshall</p>
 			</div>
 			<div
 				className={textIsVisible ? "intro-text isVisible" : "intro-text"}
 				ref={text}>
 				<p>
 					Hello my name is <span className='colored'>Gábor Jőrös</span>, from
-					Hungary. My current goal is to be part of a team where I can deepen my
-					knowledge in technologies such as React and or Laravel.
+					Hungary. Since 2022 I'm on the path to becoming a{" "}
+					<span className='colored'>Webdeveloper</span>. My current goal is to
+					be part of a team where I can deepen my knowledge in webdevelopment.
 				</p>
 				<p>
 					This <span className='colored'>Portfolio</span> is a showcase of my
@@ -45,9 +50,9 @@ const Intro = () => {
 						rel='noreferrer noopener'
 						target={"_blank"}>
 						github
+						<FontAwesomeIcon icon={faLink} />
 					</a>{" "}
-					account. I hope you enjoy taking a look and getting to know me as a
-					developer.
+					account. I hope you enjoy taking a look.
 				</p>
 			</div>
 			<div
@@ -70,12 +75,6 @@ const Intro = () => {
 					<div
 						className={skillsIsVisible ? "skill isVisible" : "skill"}
 						ref={skills}>
-						<FontAwesomeIcon icon={faBootstrap} />
-						<span className='tooltip'>Bootstrap</span>
-					</div>
-					<div
-						className={skillsIsVisible ? "skill isVisible" : "skill"}
-						ref={skills}>
 						<FontAwesomeIcon icon={faJsSquare} />
 						<span className='tooltip'>Javascript</span>
 					</div>
@@ -88,6 +87,12 @@ const Intro = () => {
 					<div
 						className={skillsIsVisible ? "skill isVisible" : "skill"}
 						ref={skills}>
+						<img src={Redux} alt='Redux logo' className='redux-logo' />
+						<span className='tooltip'>Redux</span>
+					</div>
+					<div
+						className={skillsIsVisible ? "skill isVisible" : "skill"}
+						ref={skills}>
 						<FontAwesomeIcon icon={faPhp} />
 						<span className='tooltip'>PHP</span>
 					</div>
@@ -96,6 +101,12 @@ const Intro = () => {
 						ref={skills}>
 						<FontAwesomeIcon icon={faLaravel} />
 						<span className='tooltip'>Laravel</span>
+					</div>
+					<div
+						className={skillsIsVisible ? "skill isVisible" : "skill"}
+						ref={skills}>
+						<img src={MySql} alt='Mysql logo' className='mysql-logo' />
+						<span className='tooltip'>MySQL</span>
 					</div>
 				</div>
 			</div>

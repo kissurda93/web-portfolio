@@ -1,30 +1,19 @@
 .projects-section {
-	position: relative;
 	animation: load-in 500ms;
-	color: var(--light);
-	padding-bottom: 10rem;
+	color: var(--color3);
+	padding-bottom: 4rem;
 	animation: load-in 500ms;
-	isolation: isolate;
-}
-
-.projects-section:after {
-	content: "";
-	position: absolute;
-	background-color: var(--green);
-	inset: 0;
-	transform: skewY(-5deg);
-	z-index: -1;
 }
 
 .project-container-title {
 	padding: 2rem;
-	color: var(--dark);
 	font-size: 2rem;
+	color: var(--color2);
 }
 
 .project-container {
 	margin-bottom: 1rem;
-	background-color: var(--dark);
+	background-color: var(--color1);
 	width: 100%;
 }
 
@@ -61,15 +50,27 @@
 	border: none;
 	border-radius: 2px;
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	background-color: var(--green);
-	color: var(--dark);
+	background-color: var(--color3);
+	color: var(--color1);
 	cursor: pointer;
 	transition: 250ms ease-in;
 }
 
 .link-container > a > button:hover {
-	background-color: var(--shadow_red);
-	color: var(--yellow);
+	background-color: var(--color2);
+}
+
+.projects {
+	opacity: 0;
+	transform: translateX(-300px);
+	transition: 600ms ease-in;
+	pointer-events: none;
+}
+
+.isVisible {
+	transform: translateX(0);
+	opacity: 1;
+	pointer-events: all;
 }
 
 @media only screen and (min-width: 500px) {
@@ -99,7 +100,7 @@
 @media only screen and (min-width: 1024px) {
 	.projects-section {
 		font-size: 1.5rem;
-		padding: 1rem;
+		padding: 4rem 1rem;
 		animation: none;
 	}
 
@@ -139,19 +140,5 @@
 
 	.img-container > img {
 		padding-top: 1rem;
-	}
-
-	.project-container-title,
-	.projects {
-		opacity: 0;
-		transform: translateX(-200px);
-		transition: 600ms ease-in;
-		pointer-events: none;
-	}
-
-	.isVisible {
-		transform: translateX(0);
-		opacity: 1;
-		pointer-events: all;
 	}
 }

@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 
 :root {
-	--dark: rgb(43, 45, 66);
-	--red: rgb(239, 35, 60);
-	--light: rgb(237, 242, 244);
-	--green: rgb(30, 168, 150);
-	--shadow_red: rgba(239, 35, 60, 0.5);
-	--yellow: rgb(252, 158, 79);
+	--color1: rgba(43, 45, 66, 0.9);
+	--color2: rgb(107, 212, 37);
+	--color3: rgb(147, 163, 188);
+	--color4: rgb(237, 242, 244);
 }
 
 * {
@@ -22,6 +20,15 @@
 
 * > a {
 	text-decoration: none;
+}
+
+#root {
+	background-image: url("/src/assets/new-keyboard.jpg");
+	background-color: rgba(43, 45, 66, 0.7);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: overlay;
+	color: var(--light);
 }
 
 @keyframes load-in {

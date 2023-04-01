@@ -5,22 +5,29 @@
 	align-items: center;
 }
 
+.intro-title {
+	flex-direction: column;
+	padding: 4rem;
+}
+
+.intro-title p {
+	align-self: self-end;
+}
+
 .intro {
 	flex-direction: column;
 	animation: load-in 500ms;
 	padding: 5rem 0rem;
-	animation: load-in 500ms;
+	color: var(--color3);
 }
 
 h1 {
-	background: var(--dark);
-	color: var(--light);
-	padding: 3rem;
+	color: var(--color3);
 	font-size: 2rem;
 }
 
 .colored {
-	color: var(--red);
+	color: var(--color2);
 	font-weight: 600;
 }
 
@@ -30,20 +37,26 @@ h1 {
 }
 
 .intro-text > p {
-	color: var(--dark);
+	color: var(--color3);
 	padding: 1rem 2rem;
 }
 
 .skillSet {
 	-bottom: 10rem;
 	padding: 0.5rem;
-	color: var(--dark);
+	color: var(--color2);
 	transition: 800ms;
 }
 
 .skillSet > p,
 .skills {
 	text-align: center;
+}
+
+.skills {
+	display: flex;
+	gap: 1rem;
+	align-items: start;
 }
 
 .skill {
@@ -55,29 +68,82 @@ h1 {
 	visibility: visible;
 }
 
-.skill > svg {
+.skill svg {
 	font-size: 1.6rem;
-	padding: 0.5rem;
+}
+
+.redux-logo {
+	height: 24px;
+}
+
+.mysql-logo {
+	height: 34px;
 }
 
 .tooltip {
 	visibility: hidden;
-	background-color: var(--dark);
-	color: var(--light);
+	background-color: var(--color1);
+	color: var(--color2);
 	padding: 0.5rem;
 	position: absolute;
+	border-radius: 4px;
 	z-index: 1;
-	top: 3.5rem;
+	top: 2rem;
 	left: 0;
 }
 
-.skill:nth-child(7) .tooltip {
+.skill:nth-child(8) .tooltip {
 	left: -1.2rem;
+}
+
+.intro-title,
+.intro-text,
+.skillSet,
+.skill {
+	opacity: 0;
+	transform: translateX(-200px);
+	transition: 600ms ease-in;
+}
+
+.skill:nth-child(1) {
+	transition-duration: 900ms;
+}
+
+.skill:nth-child(2) {
+	transition-duration: 1000ms;
+}
+
+.skill:nth-child(3) {
+	transition-duration: 1100ms;
+}
+
+.skill:nth-child(4) {
+	transition-duration: 1200ms;
+}
+
+.skill:nth-child(5) {
+	transition-duration: 1300ms;
+}
+
+.skill:nth-child(6) {
+	transition-duration: 1400ms;
+}
+
+.skill:nth-child(7) {
+	transition-duration: 1500ms;
+}
+
+.skill:nth-child(8) {
+	transition-duration: 1600ms;
+}
+
+.isVisible {
+	transform: translateX(0);
+	opacity: 1;
 }
 
 @media only screen and (min-width: 600px) {
 	h1 {
-		padding: 6rem;
 		font-size: 2.5rem;
 	}
 
@@ -87,6 +153,14 @@ h1 {
 
 	.skill > svg {
 		font-size: 2rem;
+	}
+
+	.redux-logo {
+		height: 29px;
+	}
+
+	.mysql-logo {
+		height: 42px;
 	}
 }
 
@@ -98,11 +172,18 @@ h1 {
 
 	h1 {
 		font-size: 3rem;
-		padding: 5rem;
 	}
 
 	.skill > svg {
 		font-size: 2.5rem;
+	}
+
+	.redux-logo {
+		height: 36px;
+	}
+
+	.mysql-logo {
+		height: 50px;
 	}
 }
 
@@ -110,7 +191,7 @@ h1 {
 	.intro {
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 12rem 0rem;
+		padding: 7rem 0rem;
 		animation: none;
 	}
 
@@ -125,50 +206,10 @@ h1 {
 
 	h1 {
 		font-size: 4rem;
-		max-width: 1072px + 80px;
 		border-radius: 4px 4px;
-		box-shadow: 3px 3px 6px var(--dark);
 	}
 
-	.intro-title,
-	.intro-text,
-	.skillSet,
-	.skill {
-		opacity: 0;
-		transform: translateX(-200px);
-		transition: 600ms ease-in;
-	}
-
-	.skill:nth-child(1) {
-		transition-duration: 900ms;
-	}
-
-	.skill:nth-child(2) {
-		transition-duration: 1000ms;
-	}
-
-	.skill:nth-child(3) {
-		transition-duration: 1100ms;
-	}
-
-	.skill:nth-child(4) {
-		transition-duration: 1200ms;
-	}
-
-	.skill:nth-child(5) {
-		transition-duration: 1300ms;
-	}
-
-	.skill:nth-child(6) {
-		transition-duration: 1400ms;
-	}
-
-	.skill:nth-child(7) {
-		transition-duration: 1500ms;
-	}
-
-	.isVisible {
-		transform: translateX(0);
-		opacity: 1;
+	.tooltip {
+		top: 2.8rem;
 	}
 }

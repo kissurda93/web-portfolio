@@ -5,8 +5,7 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	box-shadow: 6px 6px 20px var(--dark);
-	background-color: var(--light);
+	background-color: rgba(0, 0, 0, 0.7);
 	z-index: 9;
 }
 
@@ -31,17 +30,18 @@
 
 .main-navbar ul > li > a {
 	font-size: 1.2rem;
-	color: var(--dark);
-	background: linear-gradient(to right, var(--dark), var(--dark));
+	color: var(--color3);
+	background: linear-gradient(to right, var(--color2), var(--color2));
 	background-repeat: no-repeat;
 	background-size: 0 2px;
 	background-position: 100% 100%;
-	transition: background-size 300ms;
+	transition: all 300ms;
 }
 
 .main-navbar > ul > li > a:hover,
 .main-navbar > ul > li > .active {
 	background-size: 100% 2px;
+	color: var(--color2);
 }
 
 @media only screen and (min-width: 1024px) {
