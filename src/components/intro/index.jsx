@@ -14,7 +14,7 @@ import Redux from "../../assets/redux.svg";
 import MySql from "../../assets/mysql.svg";
 
 const Intro = () => {
-	const options = { root: null, rootMargin: "0px", threshold: 1.0 };
+	const options = { root: null, rootMargin: "0px", threshold: 0 };
 
 	const [title, titleIsVisible] = useIntersectionObs({ options });
 	const [text, textIsVisible] = useIntersectionObs({ options });

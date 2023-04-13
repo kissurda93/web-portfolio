@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const useIntersectionObs = options => {
+const useIntersectionObs = ({ options }) => {
 	const containerRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
 

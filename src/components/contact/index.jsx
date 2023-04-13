@@ -11,7 +11,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import useIntersectionObs from "../../hooks/useIntersectionObs";
 
 const Contact = () => {
-	const options = { root: null, rootMargin: "0px", threshold: 1.0 };
+	const options = { root: null, rootMargin: "0px", threshold: 0.3 };
 	const [form, formIsVisible] = useIntersectionObs({ options });
 
 	const [submitText, setSubmitText] = useState("Send message");

@@ -17,6 +17,10 @@
 	width: 100%;
 }
 
+.project-container a {
+	color: var(--color2);
+}
+
 .project-info {
 	padding: 1rem;
 }
@@ -39,7 +43,7 @@
 .link-container {
 	margin-top: 1rem;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	justify-self: flex-end;
 	gap: 1rem;
 }
@@ -60,17 +64,52 @@
 	background-color: var(--color2);
 }
 
-.projects {
+.projects-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+.projects-container div {
+	background-color: var(--color1);
+	padding: 1rem;
+	border-radius: 4px;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 	opacity: 0;
-	transform: translateX(-300px);
-	transition: 600ms ease-in;
+	transform: translateX(-200px);
+	transition: 600ms ease-in-out;
 	pointer-events: none;
 }
 
-.isVisible {
+.projects-container div img {
+	height: 150px;
+}
+
+.projects-container div:nth-child(1) {
+	transition-duration: 900ms;
+}
+
+.projects-container .isVisible {
 	transform: translateX(0);
 	opacity: 1;
 	pointer-events: all;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9;
 }
 
 @media only screen and (min-width: 500px) {
@@ -102,6 +141,7 @@
 		font-size: 1.5rem;
 		padding: 4rem 1rem;
 		animation: none;
+		min-height: 600px;
 	}
 
 	.project-container-title {
@@ -114,6 +154,7 @@
 		padding: 1rem;
 		margin: 2rem;
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
 		border-radius: 4px;
 	}
@@ -140,5 +181,18 @@
 
 	.img-container > img {
 		padding-top: 1rem;
+	}
+
+	.projects-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+
+	.projects-container div img {
+		height: 200px;
 	}
 }

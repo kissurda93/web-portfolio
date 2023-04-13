@@ -2,24 +2,36 @@ import gaborshoppng from "../../assets/screencapture-gaborshop.png";
 
 const projectArray = [
 	{
-		id: "1",
+		id: 1,
 		name: "GáborShop",
 		descriptions: [
 			{
 				id: 1,
-				body: "An e-commerce website that uses Laravel for the back-end REST API, React for the front-end single-page application (SPA), and MySQL as the database.",
+				body: 'A fictitious e-commerce website. Which was made for learning purposes only. Powered by Laravel, React and MySQL. This live demo uses a SimplePay SDK implementation to operate a sandbox payment. The site contains a separated <a href="https://gaborshop.hu/admin-login" target="_blank" rel="noopener noreferrer">admin panel<a/>',
 			},
 			{
 				id: 2,
-				body: "For the user features please signup on the site.",
+				body: "<hr>User Test account credentials:",
 			},
 			{
 				id: 3,
-				body: 'For the admin features please login on "/admin-login" endpoint.',
+				body: "Email-> test@email.com",
 			},
 			{
 				id: 4,
-				body: "Credentials for the admin account: <br> email: test1@email.com<br>password: testadmin1 <br> or <br> email: test2@email.com<br>password: testadmin2",
+				body: "Password-> testuser",
+			},
+			{
+				id: 5,
+				body: "<hr>Admin Test account credentials:",
+			},
+			{
+				id: 6,
+				body: "Email-> test@email.com",
+			},
+			{
+				id: 7,
+				body: "Password-> testadmin",
 			},
 		],
 		gitHubLink: "https://github.com/kissurda93/webshop.git",
